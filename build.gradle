@@ -2,8 +2,20 @@
 buildscript {
     ext.kotlin_version = "1.3.72"
     repositories {
-        google()
-        jcenter()
+
+        /**
+         * TODO: I'm using a local maven repository created with Docker and Nexus
+         *
+         * If you want to use official repositories, you must comment the next four maven lines
+         * and uncomment the official repositories lines
+         */
+        maven { url "http://127.0.0.1:8088/repository/dl.google/" }
+        maven { url "http://127.0.0.1:8088/repository/maven-central/" }
+        maven { url "http://127.0.0.1:8088/repository/maven.google/" }
+        maven { url "http://127.0.0.1:8088/repository/jcenter/" }
+
+//        google()
+//        jcenter()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.0-beta04"
@@ -16,8 +28,20 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+
+        /**
+         * TODO: I'm using a local maven repository created with Docker and Nexus
+         *
+         * If you want to use official repositories, you must comment the next four maven lines
+         * and uncomment the official repositories lines
+         */
+        maven { url "http://127.0.0.1:8088/repository/dl.google/" }
+        maven { url "http://127.0.0.1:8088/repository/maven-central/" }
+        maven { url "http://127.0.0.1:8088/repository/maven.google/" }
+        maven { url "http://127.0.0.1:8088/repository/jcenter/" }
+
+//        google()
+//        jcenter()
     }
 }
 
