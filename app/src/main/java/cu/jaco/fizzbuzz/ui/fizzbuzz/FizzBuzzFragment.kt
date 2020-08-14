@@ -28,6 +28,9 @@ class FizzBuzzFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setSupportActionBar(binding.toolbar)
+
+        binding.recycler.adapter = FizzBuzzAdapter()
+
     }
 
     private fun setSupportActionBar(toolbar: Toolbar) {
