@@ -3,26 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/clientFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="cu.jaco.fizzbuzz.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/clientFragment"
+        android:name="cu.jaco.fizzbuzz.ui.fizzbuzz.FizzBuzzFragment"
+        android:label="@string/fizz_buzz_fragment"
+        tools:layout="@layout/fragment_fizz_buzz" />
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="cu.jaco.fizzbuzz.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
 </navigation>
