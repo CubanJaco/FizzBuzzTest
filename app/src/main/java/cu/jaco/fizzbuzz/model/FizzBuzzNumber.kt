@@ -5,16 +5,16 @@ class FizzBuzzNumber(
 ) {
 
     val multiplesOfThree: Boolean
-        get() = true
+        get() = number % 3 == 0
 
     private val multiplesOfFive: Boolean
-        get() = true
+        get() = number % 5 == 0
 
     val multiplesOfThreeAndFive: Boolean
-        get() = true
+        get() = multiplesOfThree && multiplesOfFive
 
     val isFizzOrBuzz: Boolean
-        get() = true
+        get() = multiplesOfThree || multiplesOfFive
 
     override fun toString(): String {
         return number.toString()
