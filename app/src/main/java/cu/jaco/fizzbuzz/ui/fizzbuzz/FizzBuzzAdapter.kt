@@ -14,11 +14,10 @@ class FizzBuzzAdapter : RecyclerView.Adapter<FizzBuzzAdapter.FizzBuzzViewHolder>
         return FizzBuzzViewHolder(itemBinding)
     }
 
-    override fun getItemCount(): Int = 100
-
+    override fun getItemCount(): Int = 101
 
     override fun onBindViewHolder(holder: FizzBuzzViewHolder, position: Int) {
-        holder.bind(FizzBuzzNumber(position + 1))
+        holder.bind(FizzBuzzNumber(position - 50))
     }
 
     inner class FizzBuzzViewHolder(private val binding: ItemFizzBuzzBinding) :
